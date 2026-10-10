@@ -128,7 +128,7 @@ Se observa cómo la rúbrica evoluciona: el supervisor no cierra hasta que los t
 
 ### Demo interactiva (notebook en Google Colab)
 
-[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/TU_USUARIO/ejercicio-6-orquestador-multiagente/blob/main/demo_orquestador.ipynb)
+[![Abrir en Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/14ffDA-y9jv5hMjyo_3k3f6p9ptl4ajfl?usp=sharing)
 
 `demo_orquestador.ipynb` muestra el flujo de delegación paso a paso: dibuja el grafo, ejecuta la consulta de ejemplo mostrando cada decisión del supervisor (con su rúbrica) y cada aporte de los especialistas, y resume qué agente usó qué herramientas. Al final permite probar una consulta propia.
 
