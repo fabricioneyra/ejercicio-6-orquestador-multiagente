@@ -1,0 +1,100 @@
+Usuario: Investigá las reseñas de la Tarjeta Plus de BankLab, calculá su calificación promedio y el porcentaje de reseñas positivas, y calculá cuánto cuesta tenerla durante 3 años (cuota de emisión más comisión de mantenimiento mensual). Con eso, decime si la recomendarías.
+
+
+
+[Supervisor · decisión 1] -> investigador
+    razón: Es necesario obtener datos de la base sobre las reseñas de la Tarjeta Plus de BankLab antes de realizar cálculos.
+    rúbrica: fuentes=False | cálculos_por_analista=False | responde_todo=False
+    instrucción: Busca las reseñas de la Tarjeta Plus de BankLab, incluyendo calificaciones y comisiones.
+
+[Investigador] herramientas: buscar_conocimiento, buscar_conocimiento
+    resultado: Aquí tienes las reseñas y la información sobre las comisiones de la Tarjeta Plus de BankLab:
+
+### Reseñas
+1. **ID:** tp-r1  
+   **Fuente:** reseñas app BankLab  
+   **Producto:** Tarjeta Plus  
+   **Tipo:** reseña  
+   **Calificación:** 5  
+   **Texto:** "Excelente tarjeta, el cashback llega rápido y la app es muy clara. Recomiendo."
+
+2. **ID:** tp-r2  
+   **Fuente:** reseñas app BankLab  
+   **Producto:** Tarjeta Plus  
+   **Tipo:** reseña  
+   **Calificación:** 4  
+   **Texto:** "Buena tarjeta, me gusta el cashback aunque el límite inicial es bajo."
+
+3. **ID:** tp-r3  
+   **Fuente:** reseñas app BankLab  
+   **Producto:** Tarjeta Plus  
+   **Tipo:** reseña  
+   **Calificación:** 2  
+   **Texto:** "Pésimo soporte, tardaron una semana en responder y la comisión de mantenimiento es muy cara."
+
+4. **ID:** tp-r4  
+   **Fuente:** foro de usuarios  
+   **Producto:** Tarjeta Plus  
+   **Tipo:** reseña  
+   **Calificación:** 5  
+   **Texto:** "Me encanta, los pagos con la tarjeta son rápidos y seguros. Muy buena experiencia."
+
+5. **ID:** tp-r5  
+   **Fuente:** foro de usuarios  
+   **Producto:** Tarjeta Plus  
+   **Tipo:** reseña  
+   **Calificación:** 3  
+   **Texto:** "Está bien, pero la comisión es cara para lo que ofrece."
+
+### Comisiones
+- **ID:** tp-f1  
+  **Fuente:** ficha oficial BankLab  
+  **Producto:** Tarjeta Plus  
+  **Tipo:** ficha  
+  **Calificación:** null  
+  **Texto:** "Tarjeta Plus: cuota de emisión única de $12000 y comisión de mantenimiento de $3500 por mes. Cashback del 2% en supermercados."
+
+Si necesitas más información, no dudes en preguntar.
+
+[Supervisor · decisión 2] -> analista
+    razón: Se han proporcionado todos los datos necesarios, pero faltan los cálculos de la calificación promedio, el porcentaje de reseñas positivas y el costo total de la tarjeta durante 3 años.
+    rúbrica: fuentes=True | cálculos_por_analista=False | responde_todo=False
+    instrucción: Calcula la calificación promedio de las reseñas, el porcentaje de reseñas positivas (calificaciones 4 y 5) y el costo total de tener la Tarjeta Plus durante 3 años (cuota de emisión más comisión de mantenimiento mensual).
+
+[Analista] herramientas: estadisticas_basicas, analizar_sentimiento, calcular
+    resultado: Aquí están los resultados solicitados:
+
+### Calificación Promedio
+- **Promedio de calificaciones:** 3.8
+
+### Porcentaje de Reseñas Positivas
+- **Cantidad de reseñas positivas (calificaciones 4 y 5):** 3
+- **Total de reseñas:** 5
+- **Porcentaje de reseñas positivas:** 60%
+
+### Costo Total de la Tarjeta Plus durante 3 Años
+- **Costo total:** $138,000
+
+Si necesitas más información o algún otro análisis, no dudes en preguntar.
+
+[Supervisor · decisión 3] -> FINISH
+    razón: Todos los datos necesarios han sido proporcionados y los cálculos han sido realizados correctamente. La consulta está completamente respondida.
+    rúbrica: fuentes=True | cálculos_por_analista=True | responde_todo=True
+
+
+[Síntesis] Respuesta final:
+### Análisis de la Tarjeta Plus de BankLab
+
+#### Reseñas
+- **Calificación Promedio:** 3.8
+- **Porcentaje de Reseñas Positivas:** 60% (3 de 5 reseñas son positivas, con calificaciones de 4 y 5).
+
+#### Costos
+- **Cuota de Emisión:** $12,000 (pago único).
+- **Comisión de Mantenimiento Mensual:** $3,500.
+- **Costo Total durante 3 Años:** $138,000.
+
+### Recomendación
+Con una calificación promedio de 3.8 y un 60% de reseñas positivas, la Tarjeta Plus de BankLab tiene opiniones mixtas. Sin embargo, el costo total de $138,000 en 3 años es considerable. Si valoras el cashback y la facilidad de uso, podría ser una opción, pero ten en cuenta las críticas sobre el soporte y las comisiones. 
+
+**Conclusión:** La recomendaría con precaución, considerando las opiniones y el costo.
